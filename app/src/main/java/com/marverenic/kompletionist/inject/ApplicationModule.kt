@@ -2,6 +2,7 @@ package com.marverenic.kompletionist.inject
 
 import android.content.Context
 import com.marverenic.kompletionist.data.LocalTodoDataStore
+import com.marverenic.kompletionist.data.TodoDataStore
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -14,6 +15,6 @@ class ApplicationModule(val context: Context) {
 
     @Provides
     @Singleton
-    fun provideTodoDataStore() = LocalTodoDataStore()
+    fun provideTodoDataStore(): TodoDataStore = LocalTodoDataStore()
 
 }
