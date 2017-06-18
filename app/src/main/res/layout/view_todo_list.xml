@@ -14,6 +14,8 @@
         android:text="@{viewModel.listName}"
         style="@style/TextAppearance.AppCompat.Body2"
         android:padding="16dp"
-        tools:text="List name"/>
+        android:background="?selectableItemBackground"
+        android:onClick="@{() -> viewModel.onClickList()}"
+        tools:text="List name" />
 
 </layout>

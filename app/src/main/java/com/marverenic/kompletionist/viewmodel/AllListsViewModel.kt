@@ -45,7 +45,7 @@ class AllListsAdapter : RecyclerView.Adapter<ListViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup?, itemViewType: Int): ListViewHolder {
         val binding: ViewListBinding = DataBindingUtil.inflate(LayoutInflater.from(parent?.context),
-                R.layout.view_list, parent, false)
+                R.layout.view_todo_list, parent, false)
 
         return ListViewHolder(binding)
     }
@@ -54,7 +54,7 @@ class AllListsAdapter : RecyclerView.Adapter<ListViewHolder>() {
 
 class ListViewHolder(val binding: ViewListBinding) : RecyclerView.ViewHolder(binding.root) {
 
-    internal val viewModel = ListViewModel()
+    internal val viewModel = ListViewModel(binding.root.context)
 
     init {
         binding.viewModel = viewModel
