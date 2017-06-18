@@ -5,6 +5,6 @@ import io.reactivex.Observable
 
 interface TodoDataStore {
 
-    fun getTodoLists() : Observable<List<TodoList>>
+    fun getTodoLists(): Observable<List<TodoList>>
 
 }

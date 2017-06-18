@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit
 
 class LocalTodoDataStore : TodoDataStore {
 
-    val todoLists : MutableList<TodoList> = ArrayList()
+    val todoLists: MutableList<TodoList> = ArrayList()
 
     private fun now() = System.currentTimeMillis()
     private fun daysToMillis(days: Long) = TimeUnit.MILLISECONDS.convert(days, TimeUnit.DAYS)

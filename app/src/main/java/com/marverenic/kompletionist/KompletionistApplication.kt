@@ -13,11 +13,11 @@ class KompletionistApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        component = DaggerKompletionistKomponent
-                .builder()
+        component = DaggerKompletionistKomponent.builder()
                 .apply {
                     applicationModule(ApplicationModule(this@KompletionistApplication))
-                }.build()
+                }
+                .build()
     }
 
 }
