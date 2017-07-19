@@ -9,7 +9,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.marverenic.kompletionist.R
-import com.marverenic.kompletionist.databinding.ViewListBinding
+import com.marverenic.kompletionist.databinding.ViewTodoListBinding
 import com.marverenic.kompletionist.model.TodoList
 
 class AllListsViewModel(val context: Context) : BaseObservable() {
@@ -44,7 +44,7 @@ class AllListsAdapter : RecyclerView.Adapter<ListViewHolder>() {
     override fun getItemCount() = lists.size
 
     override fun onCreateViewHolder(parent: ViewGroup?, itemViewType: Int): ListViewHolder {
-        val binding: ViewListBinding = DataBindingUtil.inflate(LayoutInflater.from(parent?.context),
+        val binding: ViewTodoListBinding = DataBindingUtil.inflate(LayoutInflater.from(parent?.context),
                 R.layout.view_todo_list, parent, false)
 
         return ListViewHolder(binding)
@@ -52,7 +52,7 @@ class AllListsAdapter : RecyclerView.Adapter<ListViewHolder>() {
 
 }
 
-class ListViewHolder(val binding: ViewListBinding) : RecyclerView.ViewHolder(binding.root) {
+class ListViewHolder(val binding: ViewTodoListBinding) : RecyclerView.ViewHolder(binding.root) {
 
     internal val viewModel = ListViewModel(binding.root.context)
 

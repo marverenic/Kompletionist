@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.marverenic.kompletionist.R
-import com.marverenic.kompletionist.databinding.ViewListItemBinding
+import com.marverenic.kompletionist.databinding.ViewTaskBinding
 import com.marverenic.kompletionist.model.Task
 import com.marverenic.kompletionist.model.TodoList
 
@@ -44,7 +44,7 @@ class TaskAdapter : RecyclerView.Adapter<TaskViewHolder>() {
 
 }
 
-class TaskViewHolder(val binding: ViewListItemBinding) : RecyclerView.ViewHolder(binding.root) {
+class TaskViewHolder(val binding: ViewTaskBinding) : RecyclerView.ViewHolder(binding.root) {
 
     val viewModel = TaskViewModel()
 
