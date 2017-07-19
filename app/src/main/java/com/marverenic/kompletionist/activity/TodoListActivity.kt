@@ -13,19 +13,18 @@ import com.marverenic.kompletionist.model.TodoList
 import com.marverenic.kompletionist.viewmodel.TodoListViewModel
 import javax.inject.Inject
 
-private val TODO_LIST_EXTRA = "list"
-
 class TodoListActivity : AppCompatActivity() {
 
     @Inject lateinit var todoStore: TodoDataStore
     lateinit var binding: ActivityTodoListBinding
 
     companion object {
-        fun newIntent(context: Context, todoList: TodoList): Intent {
-            val intent = Intent(context, TodoListActivity::class.java)
-            intent.putExtra(TODO_LIST_EXTRA, todoList)
+        private val TODO_LIST_EXTRA = "list"
 
-            return intent
+        fun newIntent(context: Context, todoList: TodoList): Intent {
+            return Intent(context, TodoListActivity::class.java).apply {
+                putExtra(TODO_LIST_EXTRA, todoList)
+            }
         }
     }
 

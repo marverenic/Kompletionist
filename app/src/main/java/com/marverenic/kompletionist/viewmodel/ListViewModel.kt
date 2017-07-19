@@ -19,6 +19,8 @@ class ListViewModel(val context: Context) : BaseObservable() {
     @Bindable
     fun getListName() = list.name
 
-    fun onClickList() = context.startActivity(TodoListActivity.newIntent(context, list))
+    fun onClickList() {
+        context.startActivity(TodoListActivity.newIntent(context, list))
+    }
 
 }
