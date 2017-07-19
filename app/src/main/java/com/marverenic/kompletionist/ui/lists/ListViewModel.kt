@@ -1,10 +1,10 @@
-package com.marverenic.kompletionist.viewmodel
+package com.marverenic.kompletionist.ui.lists
 
 import android.content.Context
 import android.databinding.BaseObservable
 import android.databinding.Bindable
 import com.marverenic.kompletionist.BR
-import com.marverenic.kompletionist.activity.TodoListActivity
+import com.marverenic.kompletionist.ui.tasks.TodoListActivity
 import com.marverenic.kompletionist.model.TodoList
 
 class ListViewModel(val context: Context) : BaseObservable() {

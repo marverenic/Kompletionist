@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.marverenic.kompletionist.viewmodel.AllListsViewModel"/>
+            type="com.marverenic.kompletionist.ui.lists.AllListsViewModel"/>
     </data>
 
     <android.support.v7.widget.RecyclerView

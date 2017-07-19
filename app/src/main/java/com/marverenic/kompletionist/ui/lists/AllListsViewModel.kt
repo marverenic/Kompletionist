@@ -1,4 +1,4 @@
-package com.marverenic.kompletionist.viewmodel
+package com.marverenic.kompletionist.ui.lists
 
 import android.content.Context
 import android.databinding.BaseObservable

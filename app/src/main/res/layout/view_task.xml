@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.marverenic.kompletionist.viewmodel.TaskViewModel"/>
+            type="com.marverenic.kompletionist.ui.tasks.TaskViewModel"/>
     </data>
 
     <LinearLayout

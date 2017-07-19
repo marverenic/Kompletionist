@@ -1,4 +1,4 @@
-package com.marverenic.kompletionist.activity
+package com.marverenic.kompletionist.ui.lists
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
@@ -7,7 +7,6 @@ import com.marverenic.kompletionist.KompletionistApplication
 import com.marverenic.kompletionist.R
 import com.marverenic.kompletionist.data.TodoDataStore
 import com.marverenic.kompletionist.databinding.ActivityAllListsBinding
-import com.marverenic.kompletionist.viewmodel.AllListsViewModel
 import javax.inject.Inject
 
 class AllListsActivity : AppCompatActivity() {

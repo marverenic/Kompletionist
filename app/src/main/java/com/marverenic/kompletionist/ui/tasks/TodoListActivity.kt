@@ -1,4 +1,4 @@
-package com.marverenic.kompletionist.activity
+package com.marverenic.kompletionist.ui.tasks
 
 import android.content.Context
 import android.content.Intent
@@ -10,7 +10,6 @@ import com.marverenic.kompletionist.R
 import com.marverenic.kompletionist.data.TodoDataStore
 import com.marverenic.kompletionist.databinding.ActivityTodoListBinding
 import com.marverenic.kompletionist.model.TodoList
-import com.marverenic.kompletionist.viewmodel.TodoListViewModel
 import javax.inject.Inject
 
 class TodoListActivity : AppCompatActivity() {
