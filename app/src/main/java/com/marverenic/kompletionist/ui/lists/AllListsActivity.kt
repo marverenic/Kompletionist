@@ -2,15 +2,14 @@ package com.marverenic.kompletionist.ui.lists
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import com.marverenic.kompletionist.KompletionistApplication
 import com.marverenic.kompletionist.R
 import com.marverenic.kompletionist.data.TodoDataStore
 import com.marverenic.kompletionist.databinding.ActivityAllListsBinding
+import com.marverenic.kompletionist.ui.BaseActivity
 import javax.inject.Inject
 
-class AllListsActivity : AppCompatActivity() {
-
+class AllListsActivity : BaseActivity() {
     @Inject lateinit var todoStore: TodoDataStore
 
     lateinit var binding: ActivityAllListsBinding
@@ -25,4 +24,7 @@ class AllListsActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_all_lists)
         binding.viewModel = viewModel
     }
+
+    override fun canNavigateUp() = false
+
 }

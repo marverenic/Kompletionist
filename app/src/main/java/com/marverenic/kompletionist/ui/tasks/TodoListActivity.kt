@@ -4,15 +4,15 @@ import android.content.Context
 import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import com.marverenic.kompletionist.KompletionistApplication
 import com.marverenic.kompletionist.R
 import com.marverenic.kompletionist.data.TodoDataStore
 import com.marverenic.kompletionist.databinding.ActivityTodoListBinding
 import com.marverenic.kompletionist.model.TodoList
+import com.marverenic.kompletionist.ui.BaseActivity
 import javax.inject.Inject
 
-class TodoListActivity : AppCompatActivity() {
+class TodoListActivity : BaseActivity() {
 
     @Inject lateinit var todoStore: TodoDataStore
     lateinit var binding: ActivityTodoListBinding
@@ -39,5 +39,7 @@ class TodoListActivity : AppCompatActivity() {
         viewModel.setTodoList(todoList ?: throw IllegalArgumentException("Todo List expected"))
         binding.viewModel = viewModel
     }
+
+    override fun canNavigateUp() = true
 
 }
