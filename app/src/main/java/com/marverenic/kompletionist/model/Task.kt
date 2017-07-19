@@ -17,7 +17,7 @@ data class Task(val complete: Boolean = false,
     }
 
     private constructor(parcel: Parcel) : this(parcel.readBoolean(), parcel.readString(),
-            parcel.readLong(), parcel.readList(SubTask::class.java))
+            parcel.readLong(), parcel.readList())
 
     override fun writeToParcel(dest: Parcel?, flags: Int) {
         dest?.apply {

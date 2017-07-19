@@ -11,7 +11,7 @@ data class TodoList(var name: String, var tasks: List<Task>): Parcelable {
         override fun createFromParcel(source: Parcel): TodoList = TodoList(source)
     }
 
-    private constructor(parcel: Parcel) : this(parcel.readString(), parcel.readList(Task::class.java))
+    private constructor(parcel: Parcel) : this(parcel.readString(), parcel.readList())
 
     override fun writeToParcel(dest: Parcel?, flags: Int) {
         dest?.apply {
